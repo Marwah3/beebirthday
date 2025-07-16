@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Birthday 🎉</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      background: linear-gradient(to bottom right, #0f1c4d, #3b2c22);
+      font-family: 'Segoe UI', sans-serif;
+      text-align: center;
+      padding: 0;
+      margin: 0;
+      color: #f5f0e6;
+    }
+
+    #splash-screen {
+      position: fixed;
+      inset: 0;
+      background: #0f1c4d;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      z-index: 9999;
+    }
+
+    #splash-screen h1 {
+      color: #ffddb0;
+      font-size: 2.5em;
+      margin-bottom: 20px;
+    }
+
+    #start-button {
+      padding: 12px 24px;
+      background-color: #a87c56;
+      color: white;
+      border: none;
+      border-radius: 12px;
+      font-size: 1.2em;
+      cursor: pointer;
+    }
+
+    #start-button:hover {
+      background-color: #8a6343;
+    }
+
+    .main-content {
+      display: none;
+      padding: 50px;
+    }
+
+    h1 {
+      font-size: 3em;
+      margin-bottom: 0.2em;
+      color: #ffddb0;
+    }
+
+    p {
+      font-size: 1.2em;
+      margin: 0 auto;
+      max-width: 500px;
+      line-height: 1.6;
+    }
+
+    img.main-img {
+      width: 250px;
+      border-radius: 20px;
+      margin: 30px 0;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    }
+
+    .btn {
+      padding: 10px 20px;
+      background-color: #a87c56;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-size: 1em;
+      cursor: pointer;
+      margin: 15px;
+    }
+
+    .btn:hover {
+      background-color: #8a6343;
+    }
+
+    h2 {
+      margin-top: 50px;
+      font-size: 2em;
+      color: #ffddb0;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 30px;
+    }
+
+    .photo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 180px;
+    }
+
+    .gallery img {
+      width: 180px;
+      height: 240px;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    .caption {
+      font-size: 0.9em;
+      color: #f5f0e6;
+      margin-top: 5px;
+      text-align: center;
+    }
+
+    #wish-message {
+      display: none;
+      max-width: 600px;
+      margin: 0 auto;
+      font-style: italic;
+      font-size: 1.1em;
+      padding-top: 10px;
+    }
+
+    .love-container {
+      position: fixed;
+      pointer-events: none;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 999;
+      overflow: hidden;
+    }
+
+    .heart {
+      position: absolute;
+      font-size: 2rem;
+      animation: fall 3s linear infinite;
+      color: #ff90b3;
+      opacity: 0.9;
+    }
+
+    @keyframes fall {
+      0% {
+        transform: translateY(-100px) rotate(0deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <audio id="bg-music" loop>
+    <source src="1.mp3" type="audio/mpeg" />
+  </audio>
+
+  <div id="splash-screen">
+    <h1>✨ Welcome to Bee’s Birthday ✨</h1>
+    <button id="start-button">Start the Magic</button>
+  </div>
+
+  <div class="main-content" id="main-content">
+    <h1>عيد ميلاد سعيد <br>Bee Bee 🎂</h1>
+    <img src="image.jpg" class="main-img" alt="Birthday Image" />
+    <p>
+      Wish u all the best <br>
+      May Allah bless u in every step u take <br>
+      Never forget how loved and special you are <br>
+      Happy birthday, and may your year be filled with light, laughter, love and ME! 💖
+    </p>
+
+    <h2>💌 My Wish for You</h2>
+    <button class="btn" onclick="revealMessage()">Click here <br>True Wish for You</button>
+    <p id="wish-message">
+Haaaai bee MY birthday BOY!🥳🥳🥳
+hmmm i don't know wht to write hehehe I don’t even know where to begin, because words often fall short when I talk about you. 
+First of all HAPPY BIRTHDAY HANDSOME 🐝<br>
+May Allah bless you in every step u take 
+May Allah protect u wherever u go 
+May this year be soft
+May it bring you peace in the places you’ve been holding pain
+May it surprise you in all the gentle, beautiful ways
+And may you never forget how deeply you are loved not just today, but always. <br>
+Please keep ur health okeee pleaseeeeee i really care about your health please bee can u please stop doing that for me sorry for asking too much but i really care about you sorry for bringing this now but i really have to bring this topic 🥺(u know wht i'm talking about)<br>
+On your birthday, I’m supposed to be wishing you all the good things in life…
+But if I’m being honest?
+I kinda just wanna be one of them.<br>
+ميلادك سعيد كل عام وانت بخير 
+عقبال كل سنة يارب <br>
+يارب السنة ذي تكون من احلى السنوات لك  </p>
+
+    <h2>🎞️ Memories 🎞️</h2>
+    <div class="gallery">
+  <div class="photo"><img src="pic1.jpg" alt="Memory 1"><p class="caption">Katanya siiih candid yaaa 🧐</p></div>
+  <div class="photo"><img src="pic2.jpg" alt="Memory 2"><p class="caption">Pap dari ka miji kalau gk salah comelnyoo senyumannya😘</p></div>
+  <div class="photo"><img src="pic3.jpg" alt="Memory 3"><p class="caption">Senggol bos KAHIM mau lewaaat petantang petenteng bgt siiih mas mukanya 😎😎</p></div>
+  <div class="photo"><img src="pic4.png" alt="Memory 4"><p class="caption">Sigma boy banget siih mukanyaaa<br> THE JAW LINE 🤌🏻🤌🏻</p></div>
+  <div class="photo"><img src="pic5.jpg" alt="Memory 5"><p class="caption">This view + you = perfection 🌅</p></div>
+  <div class="photo"><img src="pic6.jpg" alt="Memory 6"><p class="caption">I don't know why but i really like this one 🤭</p></div>
+  <div class="photo"><img src="pic7.jpg" alt="Memory 7"><p class="caption">Ini lg nunjuk apa ya mas? hmmm 🧐🧐</p></div>
+  <div class="photo"><img src="pic8.png" alt="Memory 8"><p class="caption">You caught off guard, being cute💫</p></div>
+  <div class="photo"><img src="pic9.png" alt="Memory 9"><p class="caption">Bapak" numpang lewat kalau ini mah 🤣🤣</p></div>
+  <div class="photo"><img src="pic10.jpg" alt="Memory 10"><p class="caption">Ank PDD belike🤣🤣, sini" aku fotoin yg bnyk 😉</p></div>
+  <div class="photo"><img src="pic11.jpg" alt="Memory 11"><p class="caption">Eeeaa MC lagi setelah sekian lama niiicchh</p></div>
+  <div class="photo"><img src="pic12.jpg" alt="Memory 12"><p class="caption">Saking glowingnyaa sampe" ada cahaya illahi gk tuuuh 🤭</p></div>
+  <div class="photo"><img src="pic13.jpg" alt="Memory 13"><p class="caption">U look CUTEEEEEE🙂‍↕️🙂‍↕️</p></div>
+  <div class="photo"><img src="pic14.png" alt="Memory 14"><p class="caption">My bee sleeping is just cute 🫶🏻</p></div>
+  <div class="photo"><img src="pic15.jpg" alt="Memory 15"><p class="caption">A 🫶🏻 for u 😘</p></div>
+  <div class="photo"><img src="pic16.jpg" alt="Memory 16"><p class="caption">My fav pic of me i look kinda pretty 🥰</p></div>
+  <div class="photo"><img src="pic17.jpg" alt="Memory 17"><p class="caption">Touched by this editing love u bee😍</p></div>
+  <div class="photo"><img src="pic19.jpg" alt="Memory 19"><p class="caption">CUTIE ME hehehe</p></div>
+  <div class="photo"><img src="pic20.jpg" alt="Memory 20"><p class="caption">Alhambra capek tp hrs tetep dokum moments😩</p></div>
+  <div class="photo"><img src="pic21.jpg" alt="Memory 21"><p class="caption">Ur fav pic, i don't know why😅</p></div>
+      <!-- Your 21 photos go here as you already had -->
+      <!-- Skipped for brevity -->
+    </div>
+  </div>
+
+  <div class="love-container" id="love-container"></div>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <script>
+    const music = document.getElementById('bg-music');
+    const splash = document.getElementById('splash-screen');
+    const mainContent = document.getElementById('main-content');
+    const startButton = document.getElementById('start-button');
+
+    startButton.addEventListener('click', () => {
+      splash.style.display = 'none';
+      mainContent.style.display = 'block';
+      music.play();
+      confetti({ particleCount: 150, spread: 80, origin: { y: 0.6 } });
+    });
+
+    function revealMessage() {
+      const msg = document.getElementById("wish-message");
+      msg.style.display = "block";
+      confetti({ particleCount: 60, spread: 90, origin: { y: 0.5 } });
+      startHeartRain();
+    }
+
+    function startHeartRain() {
+      const container = document.getElementById("love-container");
+      for (let i = 0; i < 30; i++) {
+        const heart = document.createElement("span");
+        heart.classList.add("heart");
+        heart.innerText = ['💖','💘','💗','💓','❤️','💕','💞'][Math.floor(Math.random() * 7)];
+        heart.style.left = Math.random() * 100 + "vw";
+        heart.style.animationDuration = (Math.random() * 2 + 2) + "s";
+        container.appendChild(heart);
+
+        setTimeout(() => {
+          heart.remove();
+        }, 40000);
+      }
+    }
+  </script>
+</body>
+</html>
